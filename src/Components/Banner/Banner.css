@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu&display=swap');
+
 .banner{
-    background-image: url('https://wallpaperaccess.com/full/2703652.png');
     background-size: cover;
     height:448px;
     color: #fff;
@@ -14,6 +16,7 @@
     font-size:3rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
+    font-family: 'Ubuntu', sans-serif;
 }
 .b-btn{
     color: #fff;
@@ -37,6 +40,7 @@
     height:80px;
     padding-top: 1rem;
     max-width: 360px;
+    font-family: 'Montserrat', sans-serif;
 }
 .fade{
     height: 7.4rem;

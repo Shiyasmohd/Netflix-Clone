@@ -1,21 +1,21 @@
 import React, { useEffect,useState } from 'react';
 import './Banner.css'
 import axios from '../../axios'
-import {API_KEY} from '../../Constants/Constants'
+import {API_KEY,imageUrl} from '../../Constants/Constants'
 
 function Banner() {
-
-  const [state,setState] = useState()
-  useEffect(()=>{
-    axios.get('trending/all/week?api_key=${API_KEY}&language=en-US').then((response)=>{
-      console.log(response.data)
+  const [movie,setMovie] = useState("")
+  useEffect (()=>{
+    axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response)=>{
+      console.log(response.data.results[0]);
+      setMovie(response.data.results[2])
     })
   },[])
   return (
-    <div className="banner">
+    <div className="banner" style={{backgroundImage: `url(${imageUrl+movie.backdrop_path})`}}>
         <div className="content">
 
-            <h1 className="title">Movie Name</h1>
+            <h1 className="title">{movie.title}</h1>
 
             <div className="banner-btns">
                 <button className="b-btn">Play</button>
@@ -23,7 +23,7 @@ function Banner() {
             </div>
 
             <h1 className="description">
-                Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal mastermind manipulates the police to carry out his plan.
+                {movie.overview}
             </h1>
         </div>
         <div className="fade"></div>
