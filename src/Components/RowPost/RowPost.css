@@ -11,7 +11,11 @@
 .poster::-webkit-scrollbar{
     display:none;
 }
-.poster img{
+.posters{
     max-height: 250px;
+    margin-right:10px;
+}
+.smallPosters{
+    max-height: 150px;
     margin-right:10px;
 }
