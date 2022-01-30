@@ -43,6 +43,33 @@
     font-family: 'Montserrat', sans-serif;
 }
 .fade{
-    height: 7.4rem;
-    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
+    height: 100%;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0),#111);
+}
+
+@media only screen and (max-width:1000px){
+    .title{
+        font-size: 2rem;
+    }
+    .banner{
+        background-position: center;
+    }
+    .content{
+        height: 220px;
+        width: 35%;
+    }
+    .description{
+        width:100%;
+    }
+}
+@media only screen and (max-width:768px){
+    .description{
+        font-size: 0.8rem;
+    }
+    .content{
+        width:75%;
+    }
+    .fade{
+        background-color: rgba(0,0,0,0.5);
+    }    
 }
