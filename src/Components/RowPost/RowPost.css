@@ -33,6 +33,7 @@
 .yVideo{
     margin: 0 25%;
     width: 50%;
+    transition-duration: 0.5s;
 }
 @media only screen and (max-width:1000px){
     .yVideo{
@@ -43,5 +44,10 @@
 @media only screen and (max-width:768px){
     .posters{
         height:150px;
+    }
+    .yVideo{
+        margin: 0 5%;
+        width: 90%;
+        height: 250px;
     }
 }
